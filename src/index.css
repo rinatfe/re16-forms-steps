@@ -1,0 +1,52 @@
+.data-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.dist-box {
+  display: flex;
+  flex-direction: column;
+  margin-left:30px;
+}
+
+.input-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.transfer-data {
+  margin-left: 30px;
+  height: 35px;
+}
+
+.distance-input {
+  border-radius: 5px;
+  height: 30px;
+}
+
+.date-input {
+  border-radius: 5px;
+  height: 30px;
+}
+
+.data-container {
+  margin-top:30px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding-bottom: 5px;
+}
+
+.data-label {
+  display: flex;
+  justify-content: space-arou
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.delete {
+  margin-left: 5px;
+}
