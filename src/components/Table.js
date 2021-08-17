@@ -1,13 +1,11 @@
 import {useState} from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import keyIndex from'react-key-index';
 
 function Table(props) {
     const {items, updateDate} = props;
     const [elem, setElem] = useState();
-
-    const deleteItem = evt => {
-        updateDate(evt.target.closest(".item-container").firstElementChild.textContent);
-    }
+    
 
     return(
         <div className="data-container">
@@ -17,12 +15,12 @@ function Table(props) {
                 <label>Действия</label>
             </div>
         {items.map(i=> {
-           return <div  key={items.indexOf(i)} className="item-container">
+           return <div key={i.id} id={i.id} className="item-container">
                <div className="date">{i.date}</div>
                <div className="distance">{i.distance}</div>
                <div className="button-container">
                    <button className="edit">🖉</button>
-                   <button className="delete" onClick={deleteItem}>✘</button>
+                   <button className="delete" onClick={()=> {updateDate(i.id)}}>✘</button>
                </div>
            </div>
         })}
